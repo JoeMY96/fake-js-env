@@ -12,6 +12,7 @@ Object.defineProperties(History.prototype, {
 
 
 // *************   属性  ****************************
+History.prototype.back = function back(){debugger;}; catvm.safefunction(History.prototype.back);
 
 // **************************************************
 history = {};

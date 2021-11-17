@@ -13,6 +13,13 @@ Object.defineProperties(Window.prototype, {
 });
 
 // **************************************************
+window.settimeout = function(code, delay){
+    typeof(code)  == 'function' ? code() : undefined;
+    typeof(code)  == 'string' ? eval(code) : undefined;
+    return 1;
+
+};catvm.safefunction(window.settimeout);
+
 Window.prototype.PERSISTENT = 1;
 Window.prototype.TEMPORARY = 0;
 window.open = function open(){debugger;}; catvm.safefunction(window.open);
