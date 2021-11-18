@@ -1,3 +1,5 @@
+catvm.memory.navigator = {};
+
 var Navigator = function Window(){
     throw new  TypeError('Illegal constructor');
 };
@@ -21,9 +23,9 @@ navigator.__proto__ = Navigator.prototype;
     再将Navigator原型上的全部属性改为不可set
     以此保证和浏览器上的状态一致
 */
-for (const proto in Navigator.prototype) {
-    navigator[proto] = Navigator.prototype[proto];
-    Navigator.prototype.__defineGetter__(proto, function(){
+for (catvm.memory.navigator.temp in Navigator.prototype) {
+    navigator[catvm.memory.navigator.temp] = Navigator.prototype[proto];
+    Navigator.prototype.__defineGetter__(catvm.memory.navigator.temp, function(){
         throw new  TypeError('Illegal constructor');
     });
 }
