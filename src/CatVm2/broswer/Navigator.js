@@ -24,7 +24,7 @@ navigator.__proto__ = Navigator.prototype;
     以此保证和浏览器上的状态一致
 */
 for (catvm.memory.navigator.temp in Navigator.prototype) {
-    navigator[catvm.memory.navigator.temp] = Navigator.prototype[proto];
+    navigator[catvm.memory.navigator.temp] = Navigator.prototype[catvm.memory.navigator.temp];
     Navigator.prototype.__defineGetter__(catvm.memory.navigator.temp, function(){
         throw new  TypeError('Illegal constructor');
     });

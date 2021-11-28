@@ -13,6 +13,7 @@ function GetCode(){
     code += fs.readFileSync(`${__dirname}/broswer/Navigator.js`) + '\r\n';
     code += fs.readFileSync(`${__dirname}/broswer/History.js`) + '\r\n';
     code += fs.readFileSync(`${__dirname}/broswer/Screen.js`) + '\r\n';
+    code += fs.readFileSync(`${__dirname}/broswer/Storage.js`) + '\r\n';
     code += htmlelement.GetCode() + '\r\n';
     code += fs.readFileSync(`${__dirname}/broswer/Document.js`) + '\r\n';
 

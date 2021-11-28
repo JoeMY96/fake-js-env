@@ -14,6 +14,7 @@ Object.defineProperties(Location.prototype, {
 
 // **************************************************
 location = {};
+
 location.__proto__ =  Location.prototype;
 
 location = catvm.proxy(location);

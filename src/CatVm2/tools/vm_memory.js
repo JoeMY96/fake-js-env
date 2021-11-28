@@ -5,3 +5,5 @@ catvm.memory = {
 }
 
 catvm.memory.htmlElements = {}
+
+catvm.memory.listeners = {}
